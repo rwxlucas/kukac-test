@@ -76,7 +76,7 @@ function Desafio1() {
 
 
             <div className='row mt-4 ' style={{ width: '100%' }}>
-                <ul style={{ width: '100%', listStyle: 'none' }} className='col-md-12 d-flex flex-wrap flex-row justify-content-start align-items-center' >
+                <ul style={{ width: '100%', listStyle: 'none', color: '#fff' }} className='col-md-12 d-flex flex-wrap flex-row justify-content-center align-items-center' >
                     {
                         result ? resultItems() : ''
                     }

@@ -50,11 +50,11 @@ function Desafio2() {
         return (
             <div className='col-md-12 d-flex flex-column justify-content-center align-items-center'>
                 <div className='mt-4'>
-                    <p>Valor da compra: {pucharse}</p>
-                    <p>Troco a ser recebido: {cel1 + (cel10 * 10) + (cel100 * 100)}</p>
-                    <p>Cédulas de 1: {cel1}</p>
-                    <p>Cédulas de 10: {cel10}</p>
-                    <p>Cédulas de 100: {cel100}</p>
+                    <p>Valor da compra: R$ {pucharse},00</p>
+                    <p>Troco a ser recebido: R$ {cel1 + (cel10 * 10) + (cel100 * 100)},00</p>
+                    <p>Cédulas de 1 real: {cel1}</p>
+                    <p>Cédulas de 10 reais: {cel10}</p>
+                    <p>Cédulas de 100 reais: {cel100}</p>
                 </div>
             </div>
         )

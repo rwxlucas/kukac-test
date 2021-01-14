@@ -55,6 +55,11 @@ function Desafio4() {
         )
         setLoading(false)
         setResult([...req.data.data])
+        const cepsList = document.getElementById('cepsList')
+        window.scrollTo({
+            top: cepsList.offsetTop,
+            behavior: 'smooth'
+        })
     }
 
     const renderResult = () => {
@@ -63,7 +68,7 @@ function Desafio4() {
                 margin: '5px',
                 padding: '10px',
                 borderRadius: '10px',
-                minWidth: '250px',
+                minWidth: '280px',
                 color: '#fff',
                 backgroundColor: '#0095f6'
             }}
@@ -114,11 +119,11 @@ function Desafio4() {
             </div>
 
 
-            <div className='col-md-12 mt-4 d-flex flex-wrap justify-content-center'>
+            <div id='cepsList' className='col-md-12 mt-4 d-flex flex-wrap justify-content-center'>
                 {
                     loading ? <div className="loader"></div> : ''
                 }
-                <ul style={{ listStyle: 'none' }} className='d-flex flex-row flex-wrap justify-content-start'>
+                <ul style={{ listStyle: 'none' }} className='d-flex flex-row flex-wrap justify-content-center'>
                     {
                         result.length > 0 ? renderResult() : ''
                     }
