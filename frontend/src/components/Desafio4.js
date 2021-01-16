@@ -50,7 +50,7 @@ function Desafio4() {
         const req = await axios.post(
             'http://localhost:8000/cep',
             {
-                cep: [...cepRequest]
+                cep: cepRequest
             }
         )
         setLoading(false)

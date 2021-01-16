@@ -4,6 +4,7 @@ route.post('/', (req, res) => {
     if (!req.body.number || req.body.number.length < 2) {
         return res.json({ message: 'Invalid credentials!' })
     }
+    
     let [pucharse, money] = req.body.number
     pucharse = parseInt(pucharse)
     money = parseInt(money)

@@ -38,7 +38,7 @@ function Desafio1() {
                 key={`result${index}`}
                 className="d-flex align-items-center justify-content-center"
                 style={{
-                    backgroundColor: '#0095f6', 
+                    backgroundColor: '#0095f6',
                     width: '50px',
                     height: '50px',
                     borderRadius: '10px',
