@@ -6,8 +6,9 @@ route.post('/', async (req, res) => {
     if (!req.body.cep || req.body.cep.length < 5 || req.body.cep.length > 5) {
         return res.json({ message: 'Invalid request!' })
     }
-
+    
     const reg = new RegExp('^\\d+$');
+    // const reg = new RegExp('^\d{5}-\d{3}$');
     for (const i of req.body.cep) {
         if (i.toString().length !== 8) {
             return res.json({ message: 'Invalid CEP.' })

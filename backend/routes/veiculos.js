@@ -29,6 +29,7 @@ route.post('/', (req, res) => {
     if (req.body.selected === 'moto') {
         if (req.body.passageiros >= 1 && req.body.passageiros <= 2) {
             const moto = {
+                tipo: 'moto',
                 modelo: req.body.modelo,
                 fabricacao: req.body.fabricacao,
                 portas: 0,
@@ -44,12 +45,15 @@ route.post('/', (req, res) => {
             }
             jsonFile.data.push(moto);
             fs_1.default.writeFileSync(pathToJson, JSON.stringify(jsonFile));
-            return res.json(moto);
+            const existingData = fs_1.default.readFileSync(path_1.default.join(__dirname, '../data/veiculos.json'), 'utf-8');
+            return res.json(JSON.parse(existingData));
         }
     }
     if (req.body.selected === 'carro') {
         if (req.body.portas >= 2 && req.body.portas <= 4) {
             const carro = {
+                tipo: 'carro',
+                rodas: 4,
                 modelo: req.body.modelo,
                 fabricacao: req.body.fabricacao,
                 portas: req.body.portas,
@@ -63,7 +67,8 @@ route.post('/', (req, res) => {
             }
             jsonFile.data.push(carro);
             fs_1.default.writeFileSync(pathToJson, JSON.stringify(jsonFile));
-            return res.json(carro);
+            const existingData = fs_1.default.readFileSync(path_1.default.join(__dirname, '../data/veiculos.json'), 'utf-8');
+            return res.json(JSON.parse(existingData));
         }
     }
     res.status(400).json({ message: 'Invalid data request!' });

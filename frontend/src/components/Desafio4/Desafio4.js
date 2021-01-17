@@ -104,6 +104,7 @@ function Desafio4() {
 
                 <form onSubmit={handleForm} className='mt-4 d-flex flex-column justify-content-center align-items-start' style={{ width: '300px' }} >
                     <p>Entre com os CEP's:</p>
+                    <small className="form-text text-muted">Informe os CEP's sem o hífen.</small>
                     <div className="form-group" style={{ width: '100%' }}>
                         <input required type="text" onChange={e => onCep1Change(e.target.value)} value={cep1} className="form-control" id="cep1" placeholder='Primeiro' />
                     </div>
