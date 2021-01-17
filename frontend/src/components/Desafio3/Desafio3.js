@@ -25,33 +25,37 @@ function Desafio3() {
 
     const handleForm = async e => {
         e.preventDefault()
-        setFormSent(true)
-        if (selVehicle === 'moto') {
-            const req = await axios.post(
-                'http://localhost:8000/veiculos',
-                {
-                    modelo,
-                    fabricacao: parseInt(fabricacao),
-                    marca,
-                    passageiros: parseInt(passageiros),
-                    selected: selVehicle
-                }
-            )
-            setData(req.data.data)
-        } else if (selVehicle === 'carro') {
-            const req = await axios.post(
-                'http://localhost:8000/veiculos',
-                {
-                    modelo,
-                    fabricacao: parseInt(fabricacao),
-                    portas: parseInt(portas),
-                    marca,
-                    selected: selVehicle
-                }
-            )
-            setData(req.data.data)
+        try {
+            setFormSent(true)
+            if (selVehicle === 'moto') {
+                const req = await axios.post(
+                    'http://localhost:8000/veiculos',
+                    {
+                        modelo,
+                        fabricacao: parseInt(fabricacao),
+                        marca,
+                        passageiros: parseInt(passageiros),
+                        selected: selVehicle
+                    }
+                )
+                setData(req.data.data)
+            } else if (selVehicle === 'carro') {
+                const req = await axios.post(
+                    'http://localhost:8000/veiculos',
+                    {
+                        modelo,
+                        fabricacao: parseInt(fabricacao),
+                        portas: parseInt(portas),
+                        marca,
+                        selected: selVehicle
+                    }
+                )
+                setData(req.data.data)
+            }
+            clearInput()
+        } catch (err) {
+            console.log(err)
         }
-        clearInput()
     }
 
     const handleSelect = e => {

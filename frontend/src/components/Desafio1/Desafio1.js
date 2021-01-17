@@ -18,7 +18,6 @@ function Desafio1() {
             )
             setResponseOk(true)
             setPalindrome(req.data.message)
-            console.log(palindrome)
         } catch (err) {
             console.log(err)
         }

@@ -55,7 +55,6 @@ function Desafio4() {
                 }
             )
             setLoading(false)
-            console.log(req.data)
             setResult([...req.data.data])
             const cepsList = document.getElementById('cepsList')
             window.scrollTo({

@@ -8,8 +8,6 @@ route.post('/', (req: Request, res: Response) => {
     const pathToJson = `${path.join(__dirname, '../data/veiculos.json')}`
     const { modelo, fabricacao, portas, marca, rodas, passageiros, selected } = req.body
 
-    console.log(req.body)
-
     if (selected === 'carro') {
         if (
             typeof (modelo) !== 'string' || typeof (fabricacao) !== 'number' ||
@@ -43,16 +41,16 @@ route.post('/', (req: Request, res: Response) => {
         passageiros: 1 | 2;
     };
 
-    if (req.body.selected === 'moto') {
-        if (req.body.passageiros >= 1 && req.body.passageiros <= 2) {
+    if (selected === 'moto') {
+        if (passageiros >= 1 && passageiros <= 2) {
             const moto: Moto = {
                 tipo: 'moto',
-                modelo: req.body.modelo,
-                fabricacao: req.body.fabricacao,
+                modelo,
+                fabricacao,
                 portas: 0,
-                marca: req.body.marca,
+                marca,
                 rodas: 2,
-                passageiros: req.body.passageiros
+                passageiros
             }
             const jsonFile = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/veiculos.json'), 'utf-8'))
             for (const data of jsonFile.data) {
@@ -68,15 +66,15 @@ route.post('/', (req: Request, res: Response) => {
         }
     }
 
-    if (req.body.selected === 'carro') {
-        if (req.body.portas >= 2 && req.body.portas <= 4) {
+    if (selected === 'carro') {
+        if (portas >= 2 && portas <= 4) {
             const carro: Carro = {
                 tipo: 'carro',
                 rodas: 4,
-                modelo: req.body.modelo,
-                fabricacao: req.body.fabricacao,
-                portas: req.body.portas,
-                marca: req.body.marca
+                modelo,
+                fabricacao,
+                portas,
+                marca
             }
             const jsonFile = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/veiculos.json'), 'utf-8'))
             for (const data of jsonFile.data) {
