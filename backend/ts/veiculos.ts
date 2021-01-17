@@ -78,6 +78,7 @@ route.post('/', (req: Request, res: Response) => {
             }
             jsonFile.data.push(carro)
             fs.writeFileSync(pathToJson, JSON.stringify(jsonFile))
+            
             return res.json(carro)
         }
     }

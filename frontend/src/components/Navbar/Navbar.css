@@ -1,0 +1,15 @@
+nav ul{
+    list-style: none;
+}
+
+nav ul li{
+    color: #000;
+    rotate: -90deg;
+}
+nav ul li:hover{
+    color: #ff89a0;
+}
+
+nav ul a {
+    text-decoration: none;
+}
