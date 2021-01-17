@@ -75,7 +75,7 @@ function Desafio2() {
                 Bem vindo ao segundo desafio!
             </h1>
 
-            <div className='ml-4 mt-5 col-md-12 d-flex flex-column align-items-center justify-content-center' style={{ width: '100%' }}>
+            <div className='ml-4 mt-4 col-md-12 d-flex flex-column align-items-center justify-content-center' style={{ width: '100%' }}>
                 <h5>Então você deseja fazer compras? Vamos lá!</h5>
 
                 <form onSubmit={handleForm} className='mt-4 d-flex flex-column justify-content-center align-items-start' style={{ width: '300px' }} >

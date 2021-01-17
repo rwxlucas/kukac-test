@@ -146,7 +146,7 @@ function Desafio3() {
             </div>
 
             <div className="row">
-                <div className="col-md-12 d-flex flex-column align-items-center justify-content-center">
+                <div className="mt-4 col-md-12 d-flex flex-column align-items-center justify-content-center">
                     <h5>Entre com as informações de seu respectivo veículo:</h5>
                     <label htmlFor="veiculo" style={{ width: '300px' }}>
                         Selecione seu veículo: <select className='form-select' onChange={e => handleSelect(e)} name="veiculo" id="veiculo">

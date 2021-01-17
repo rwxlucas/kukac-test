@@ -5,6 +5,7 @@ import Desafio1 from './components/Desafio1/Desafio1';
 import Desafio2 from './components/Desafio2/Desafio2';
 import Desafio3 from './components/Desafio3/Desafio3';
 import Desafio4 from './components/Desafio4/Desafio4';
+import Welcome from './components/Welcome/Welcome';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Navbar />
 
         <div style={{marginLeft: '80px'}}>
+          <Route exact path={'/'} component={Welcome} />
           <Route path={'/desafio1'} component={Desafio1} />
           <Route path={'/desafio2'} component={Desafio2} />
           <Route path={'/desafio3'} component={Desafio3} />
