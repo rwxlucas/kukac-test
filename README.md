@@ -1,5 +1,5 @@
 # Kukac Test
-This is a challenge proposed by the company Kukac with the purpose of testing the candidates' skills.
+This is a challenge proposed by the company Kukac with the purpose of testing the candidates skills.
 
 # Features
 * Find palindrome numbers
