@@ -5,7 +5,7 @@ This is a challenge proposed by the company Kukac with the purpose of testing th
 * Find palindrome numbers
 * Find out the amount of notes received
 * Store vehicle data
-* Consume an CEP Api
+* Consume a CEP Api
 
 # How to use
 It's simple, just click in the challenge and enter the necessary input.
